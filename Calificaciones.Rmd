@@ -1,0 +1,28 @@
+---
+title: "Materias"
+author: "Luis Cabrera"
+date: "6 de febrero de 2016"
+output: pdf_document
+---
+
+## Calificaciones
+
+* Matematicas Basicas                     6
+* Problema de Matematicas Basicas         6
+* Conceptos de Cálculo                    9
+* Cálculo Direfencial                     8
+* Cálculo Integral                        6
+* Teoría de Ecuaciones                    6
+* Álgebra Lineal                          7
+* Geometría Analítica                     8
+* Programación Actuarial I                8
+* Programación Actuarial II               9
+* Introducción a la Profesion Actuarial   9
+* Teoría del Interés I                    8
+* Teoría del Interés II                   8
+* Contabilidad                            9
+* Microeconomía                           10
+* Macroeconomía                           9
+* DHPC                                    8
+* DHTIC                                   8
+* Formación Humana y Social               9
