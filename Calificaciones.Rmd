@@ -7,22 +7,36 @@ output: pdf_document
 
 ## Calificaciones
 
+# Primer Semestre
 * Matematicas Basicas                     6
 * Problema de Matematicas Basicas         6
 * Conceptos de Cálculo                    9
-* Cálculo Direfencial                     8
-* Cálculo Integral                        6
+* Programación Actuarial I                8
+* DHPC                                    8
+
+#Segundo Semestre
 * Teoría de Ecuaciones                    6
+* Teoría del Interés I                    8
+* Microeconomía                           10
+
+#Tercer Semestre
+* Teoría del Interés II                   8
+* Macroeconomía                           9
+* Contabilidad                            9
+
+#Cuarto Semestre
+* Cálculo Direfencial                     8
 * Álgebra Lineal                          7
 * Geometría Analítica                     8
-* Programación Actuarial I                8
+* Sistema Financiero Mexicano             8
+
+#Quinto Semestre
+* Cálculo Integral                        6
 * Programación Actuarial II               9
 * Introducción a la Profesion Actuarial   9
-* Teoría del Interés I                    8
-* Teoría del Interés II                   8
-* Contabilidad                            9
-* Microeconomía                           10
-* Macroeconomía                           9
-* DHPC                                    8
 * DHTIC                                   8
 * Formación Humana y Social               9
+
+
+
+
