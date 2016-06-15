@@ -83,6 +83,8 @@ str(mapply)
 list(rep(1,4),rep(2,3),rep(3,2),rep(4,1))
 mapply(rep,1:4,4:1)
 
+rep(1:4,4:1)
+
 
 
 
@@ -94,3 +96,88 @@ w<- list(a=matrix(1:20,5,4),b=matrix(20:40,5,4),c=matrix(60:80,5,4))
 w
 dim(w)<-c(3,5,4)
 apply(w,mean)
+
+
+
+
+install.packages("rJava")
+install.packages("xlsx")
+install.packages("XML")
+install.packages("jsonlite")
+install.packages("data.table")
+
+# 27/05/2016.
+
+if(!file.exists("data")){dir.create("data")}
+
+url <- "https://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD"
+download.file(url,"./data/camaras.csv")
+list.files("./data")
+fechaDescarga <- date()
+fechaDescarga
+
+datoscamera<- read.table("./data/camaras.csv", sep= "," , header = T)
+head(datoscamera)
+
+
+if(!file.exists("data")){dir.create("data")}
+
+url <- "https://data.baltimorecity.gov/api/views/dz54-2aru/rows.xlsx?accessType=DOWNLOAD"
+download.file(url,destfile= "./data/camaras.xlsx")
+list.files("./data")
+fechaDescarga <- date()
+fechaDescarga
+
+datoscamera<- read.table("./data/camaras.xlsx", method= "curl")
+head(datoscamera)
+
+
+
+#02/06/2016.
+
+library(data.table)
+DF = data.frame(x=rnorm(9),y=rep(c("a","b","c"),each=3),z=rnorm(9))
+head(DF,3)
+
+DT = data.table(x=rnorm(9),y=rep(c("a","b","c"),each=3),z=rnorm(9))
+head(DT,3)
+
+DT[2,]
+
+# te muestra todos los valores que en la columna "y" tienen a
+DT[DT$y == "a",]
+DT[c(2,3)]
+DT[,c(2,3)]
+
+k = {print(10);5}
+print(k)
+
+DT[,list(mean(x),sum(z))]
+DT[,table(y)]
+DT[,w:=z^2]
+DT
+DT2 <- DT
+DT[,y:=2]
+DT
+
+head(DT)
+head(DT2)
+
+DT[,m:={tmp<-(x+z); log2(tmp+5)}]
+DT
+DT[,a:=x>0]
+DT
+
+DT[,b:=mean(x+w),by=a]
+DT
+
+
+#elementos a, b y c. tomo tantas veces 1E5 = 100000 y anota el número de cada una de las que repitieron.
+DT <- data.table(x=sample(letters[1:3],1E5,TRUE))
+DT[,.N,by=x]
+
+DT <- data.table(x=rep(letters[1:3],each=100), y=rnorm(300))
+setkey(DT,x)
+DT['a']
+
+
